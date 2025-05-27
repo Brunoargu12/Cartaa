@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Micaela</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .envelope {
+      width: 200px;
+      height: 150px;
+      background: #3498db;
+      margin: 100px auto 20px;
+      position: relative;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .paper {
+      display: none;
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border: 2px solid #3498db;
+      border-radius: 10px;
+      font-size: 18px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .capybara {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope" onclick="abrirCarta()">
+    <p style="color:white; padding-top: 60px;">Clique para abrir</p>
+  </div>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Capybara_%28Hydrochoerus_hydrochaeris%29.JPG/320px-Capybara_%28Hydrochoerus_hydrochaeris%29.JPG" alt="Capivara" class="capybara">
+
+  <div class="paper" id="carta">
+    Obrigado pelos dias especiais que tenho passado com você. Continue brilhando intensamente.
+  </div>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById("carta").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
